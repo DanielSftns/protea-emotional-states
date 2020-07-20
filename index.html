@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animations</title>
+</head>
+<body>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			justify-content: space-around;
+			align-items: center;
+			padding: 1em;
+		}
+		.animation-flowers{
+			/*width: 25em;*/
+			height: 35em;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+		.animationSingleFlower{
+			height: 100%;
+		}
+
+		@keyframes wind{
+	        0%{
+	            transform: rotate(0deg); 
+	            animation-timing-function: ease-in-out;
+	        }
+	        25%{
+	            transform: rotate(2deg); 
+	            animation-timing-function: linear;
+	        }
+	        50%{
+	            transform: rotate(1deg); 
+	            animation-timing-function: ease-out;
+	        }
+	        75%{
+	            transform: rotate(-1deg);
+	            animation-timing-function: ease-in; 
+	        }
+	        100%{
+	            transform: rotate(0deg);
+	            animation-timing-function: linear;
+	        }
+	    }
+
+		button{
+			padding: 1em 1.5em;
+		}
+	</style>
+<div class="animation-flowers"></div>
+
+	<div class="buttons">
+		<button class="angry">Angry</button>
+		<button class="confused">Confused</button>
+		<button class="balanced">Balanced</button>
+		<button class="sensitive">Sensitive</button>
+		<button class="withdrawn">Withdrawn</button>
+	</div>
+
+	<script src="./app.js"></script>
+
+</body>
+</html>
